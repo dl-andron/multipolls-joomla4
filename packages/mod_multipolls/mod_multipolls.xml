@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>MOD_MULTIPOLLS</name>
+    <creationDate>September 2022</creationDate>
+    <author>A.Lipnitski</author>
+    <copyright></copyright>
+    <license>GPLv3</license>
+    <version>2.0</version>
+    <description>MOD_MULTIPOLLS_DESC</description>
+    <namespace path="src">DL\Module\Multipolls</namespace>
+    <files>
+        <filename module="mod_multipolls">mod_multipolls.php</filename>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/mod_multipolls.ini</language>
+        <language tag="en-GB">language/en-GB/mod_multipolls.sys.ini</language>
+        <language tag="ru-RU">language/ru-RU/mod_multipolls.ini</language>
+        <language tag="ru-RU">language/ru-RU/mod_multipolls.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="id_poll"
+                    type="selectpoll"
+                    label="MOD_MULTIPOLLS_SELECT_POLL"
+                    addfieldprefix="DL\Component\Multipolls\Administrator\Field"
+                    required="required"
+                >
+                    <option value="">MOD_MULTIPOLLS_SELECT_POLL_SELECT</option>
+                </field>
+                <field
+                    name="show_poll_name"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="MOD_MULTIPOLLS_SHOW_POLL_NAME"
+                    default="0"
+                    filter="integer"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                    name="slider-title"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="MOD_MULTIPOLLS_TITLE_SPOILER"
+                    default="0"
+                    filter="integer"
+                    showon="show_poll_name:1"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                    name="show_poll_text"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="MOD_MULTIPOLLS_SHOW_POLL_TEXT"
+                    default="0"
+                    filter="integer"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                    name="show_one_by_one"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="MOD_MULTIPOLLS_SHOW_ANSWERS_ONE_BY_ONE"
+                    default="0"
+                    filter="integer"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                    name="show_result_button"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="MOD_MULTIPOLLS_RESULT_BUTTON"
+                    default="0"
+                    filter="integer"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                    name="show_result_after_vote"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="MOD_MULTIPOLLS_SHOW_RESULT_AFTER_VOTE"
+                    default="0"
+                    filter="integer"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

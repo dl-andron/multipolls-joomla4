@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field
+            name="search"
+            type="text"
+            inputmode="search"
+            label="COM_MULTIPOLLS_FILTER_SEARCH_LABEL"
+            description="COM_MULTIPOLLS_POLL_FILTER_SEARCH_DESC"
+            hint="JSEARCH_FILTER"
+        />
+
+        <field
+            name="published"
+            type="status"
+            optionsFilter="0,1"
+            label="JSTATUS"
+            onchange="this.form.submit();"
+        >
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+    </fields>
+
+    <fields name="list">
+        <field
+            name="fullordering"
+            type="list"
+            label="JGLOBAL_SORT_BY"
+            statuses="1,2"
+            onchange="this.form.submit();"
+            default="id DESC"
+            validate="options"
+        >
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="published ASC">JSTATUS_ASC</option>
+            <option value="published DESC">JSTATUS_DESC</option>
+            <option value="name ASC">JGLOBAL_NAME_ASC</option>
+            <option value="name DESC">JGLOBAL_NAME_DESC</option>
+            <option value="created ASC">COM_MULTIPOLLS_HEADING_CREATED_ON_ASC</option>
+            <option value="created DESC">COM_MULTIPOLLS_HEADING_CREATED_ON_DESC</option>
+            <option value="id ASC">JGRID_HEADING_ID_ASC</option>
+            <option value="id DESC">JGRID_HEADING_ID_DESC</option>
+        </field>
+
+        <field
+            name="limit"
+            type="limitbox"
+            label="JGLOBAL_LIST_LIMIT"
+            default="25"
+            onchange="this.form.submit();"
+        />
+    </fields>
+</form>

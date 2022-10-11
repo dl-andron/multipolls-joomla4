@@ -1,0 +1,81 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "com_multipolls",
+  "version": "2.0.0",
+  "description": "Multipolls",
+  "assets": [
+    {
+      "name": "com_multipolls.captcha",
+      "type": "script",
+      "uri": "com_multipolls/captcha.js",
+      "dependencies": [
+        "core",
+        "jquery"
+      ]
+    },
+    {
+      "name": "com_multipolls.styles",
+      "type": "style",
+      "uri": "com_multipolls/styles.css"
+    },
+    {
+      "name": "com_multipolls.captcha",
+      "type": "style",
+      "uri": "com_multipolls/captcha.css"
+    },
+    {
+      "name": "com_multipolls.form-events",
+      "type": "script",
+      "uri": "com_multipolls/form-events.js",
+      "dependencies": [
+        "core",
+        "jquery"
+      ]
+    },
+    {
+      "name": "com_multipolls.validation",
+      "type": "script",
+      "uri": "com_multipolls/validation.js",
+      "dependencies": [
+        "core",
+        "jquery"
+      ]
+    },
+    {
+      "name": "com_multipolls.jquery-ui.js",
+      "type": "script",
+      "uri": "com_multipolls/jquery-ui.js",
+      "dependencies": [
+        "jquery"
+      ]
+    },
+    {
+      "name": "com_multipolls.priority",
+      "type": "script",
+      "uri": "com_multipolls/priority.js",
+      "dependencies": [
+        "core",
+        "jquery",
+        "com_multipolls.jquery-ui.js"
+      ]
+    },
+    {
+      "name": "com_multipolls.results",
+      "type": "script",
+      "uri": "com_multipolls/results.js",
+      "dependencies": [
+        "core",
+        "jquery"
+      ]
+    },
+    {
+      "name": "com_multipolls.one-by-one",
+      "type": "script",
+      "uri": "com_multipolls/one-by-one.js",
+      "dependencies": [
+        "core",
+        "jquery"
+      ]
+    }
+  ]
+}

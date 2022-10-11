@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade"> 
+    <name>COM_MULTIPOLLS</name>
+    <creationDate>September 2022</creationDate>
+    <author>A.Lipnitski</author>
+    <copyright></copyright>
+    <license>GPLv3</license>
+    <version>2.0</version>
+    <description>COM_MULTIPOLLS_DESC</description>
+    <scriptfile>script.install.php</scriptfile>
+    <namespace path="src">DL\Component\Multipolls</namespace>
+    <media destination="com_multipolls" folder="media">
+        <folder>js</folder>
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>fonts</folder>
+        <filename>joomla.asset.json</filename>
+    </media>
+    <files folder="site">
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates</schemapath>
+        </schemas>
+    </update>
+    <languages folder="site">
+        <language tag="en-GB">language/en-GB/com_multipolls.ini</language>
+        <language tag="ru-RU">language/ru-RU/com_multipolls.ini</language>
+    </languages>
+    <administration>
+        <menu>com_multipolls</menu>
+        <submenu>
+            <menu
+                link="option=com_multipolls&amp;view=polls"
+                view="polls"
+                img="class:multipolls"
+                alt="Multipolls/Multipolls"
+                >
+                com_multipolls_polls
+            </menu>
+            <menu
+                link="option=com_multipolls&amp;view=questions"
+                view="questions"
+                img="class:multipolls-questions"
+                alt="Multipolls/Questions"
+                >
+                com_multipolls_questions
+            </menu>
+            <menu
+                link="option=com_multipolls&amp;view=answers"
+                view="answers"
+                img="class:multipolls-answers"
+                alt="Multipolls/Answers"
+                >
+                com_multipolls_answers
+            </menu>
+            <menu
+                link="option=com_multipolls&amp;view=langs"
+                view="langs"
+                img="class:multipolls-langs"
+                alt="Multipolls/Langs"
+                >
+                com_multipolls_langs
+            </menu>
+        </submenu>
+        <files folder="admin">
+            <filename>access.xml</filename>       
+            <filename>config.xml</filename>
+            <folder>forms</folder>
+            <folder>services</folder>
+            <folder>sql</folder>            
+            <folder>src</folder>
+            <folder>tmpl</folder>
+        </files>
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB/com_multipolls.ini</language>
+            <language tag="en-GB">language/en-GB/com_multipolls.sys.ini</language>
+            <language tag="ru-RU">language/ru-RU/com_multipolls.ini</language>
+            <language tag="ru-RU">language/ru-RU/com_multipolls.sys.ini</language>
+        </languages>        
+    </administration>
+</extension>

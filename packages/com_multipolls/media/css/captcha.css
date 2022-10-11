@@ -1,0 +1,14 @@
+.captcha-pic {
+    border: 1px solid gray;
+}
+
+.icon-refresh {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.captcha-input {
+    width: 90px !important;
+    display: inline-block !important;
+    height: auto;
+}

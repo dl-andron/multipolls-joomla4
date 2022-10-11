@@ -1,0 +1,3 @@
+$(function() {
+    $(".priority-list").sortable();
+});

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details">
+        <field
+            name="img_url"
+            type="media"
+            label="COM_MULTIPOLLS_IMG_URL"
+        />
+
+        <field
+            name="id_question"
+            type="selectquestion"
+            label="COM_MULTIPOLLS_QUESTION"
+            addfieldprefix="DL\Component\Multipolls\Administrator\Field"
+            required="required"
+        >
+        </field>
+
+        <field
+            name="ordering"
+            type="text"
+            label="JFIELD_ORDERING_LABEL"
+            default="0"
+        />
+    </fieldset>
+    <fieldset name="publish">
+        <field
+            name="id"
+            type="hidden"
+            label="JGLOBAL_FIELD_ID_LABEL"
+            size="10"
+            default="0"
+            readonly="true"
+        />
+
+        <field
+            name="published"
+            type="list"
+            label="JSTATUS"
+            default="1"
+            class="form-select-color-state"
+            validate="options"
+        >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+
+        <field
+            name="publish_up"
+            type="calendar"
+            label="COM_MULTIPOLLS_FIELD_PUBLISH_UP_LABEL"
+            translateformat="true"
+            showtime="true"
+            filter="user_utc"
+        />
+
+        <field
+            name="publish_down"
+            type="calendar"
+            label="COM_MULTIPOLLS_FIELD_PUBLISH_DOWN_LABEL"
+            translateformat="true"
+            showtime="true"
+            filter="user_utc"
+        />
+
+        <field
+            name="created"
+            type="calendar"
+            label="COM_MULTIPOLLS_FIELD_CREATED_LABEL"
+            translateformat="true"
+            showtime="true"
+            filter="user_utc"
+        />
+    </fieldset>
+</form>
